@@ -1,0 +1,675 @@
+body {
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+}
+
+/* MAIN SECTION */
+.main {
+  background: url("pHome.jpg")no-repeat center center/cover;
+  height: 100vh;
+  width: 100%;
+}
+
+
+/* ABOUT SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  min-height: 100vh;
+  background-color: rgb(221, 158, 158);
+}
+
+.content {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 150px;
+  font-weight: 700;
+  margin-bottom: 1px;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.greeting {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  width: 450px;
+  height: auto;
+  border-radius: 4px;
+  border: 10px solid white;
+
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .image-container img {
+    width: 250px;
+  }
+}
+
+
+/* TABLE OF CONTENT */
+.toc-section {
+  padding: 60px 8%;
+  position: relative;
+  background-color: rgba(191, 223, 191, 0.716);
+  height: 100vh;
+}
+
+/* Heading */
+.toc-heading {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.scribble {
+  font-family: "Dancing Script", cursive;
+  font-size: 70px;
+  color: #80d141;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: 1;
+}
+
+.toc-heading h1 {
+  font-size: 80px;
+  font-weight: 800;
+  color: #000;
+  z-index: 2;
+  position: relative;
+  text-decoration: underline;
+}
+
+/* Grid Layout */
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 40px;
+  padding: 60px;
+}
+
+.item {
+  position: relative;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  display: block;
+  margin-left: 10px;
+}
+
+.scribe {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  color: #80d141;
+  margin-left: 10px;
+  margin-top: -5px;
+  display: inline-block;
+  font-style: italic;
+}
+
+
+/* LOGOFOLIO */
+.section-title {
+  background: #c27d3418;
+  padding: 150px 40px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.section-title h1 {
+  font-size: 90px;
+  font-weight: 800;
+  color: #c569135f;
+  margin: 0;
+  letter-spacing: 1px;
+  text-decoration:underline;
+}
+
+/* Subtitle */
+.section-title .subtitle {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+  opacity: 0.9;
+  color: brown;
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 60px;
+}
+
+.logo-card {
+  background: #f0f0f0;
+  border-radius: 22px;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.logo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.logo-card img {
+  max-width: 180px;
+  max-height: 160px;
+  object-fit: contain;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Large tablets / small laptops */
+@media (max-width: 1024px) {
+  .section-title h1 {
+    font-size: 70px;
+  }
+
+  .logo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .section-title {
+    padding: 80px 20px;
+  }
+
+  .section-title h1 {
+    font-size: 38px;
+  }
+
+  .section-title .subtitle {
+    font-size: 16px;
+  }
+
+  .logo-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .logo-card {
+    height: 120px;
+    padding: 25px;
+  }
+
+  .logo-card img {
+    max-width: 140px;
+  }
+}
+
+/* PHOTOGRAPHY FRAMES */
+.gallery {
+  background-color: rgb(207, 231, 231);
+  padding: 60px 8%;
+  position: relative;
+}
+
+/* Heading */
+.photos {
+  color: purple;
+  font-size: 70px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Layout: left big showcase + right smaller grid */
+.Frames-grid {
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 36px;
+  align-items: start;
+}
+
+/* left showcase */
+.showcase {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 48px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(251, 222, 222);
+}
+
+.showcase .image {
+  width: 100%;
+  height: 320px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* right side grid of rounded image cards */
+.mini-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 28px;
+  padding: 18px;
+  box-shadow: 18px 24px 30px rgba(0, 0, 0, 0.12);
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: white
+}
+
+.card .thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* caption below showcase */
+.caption {
+  margin-top: 18px;
+  font-size: 18px;
+  color: #222;
+  max-width: 70%;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+.card {
+  animation: fadeUp 0.8s ease forwards;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* staggered animation */
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* --- Hover effect for cards --- */
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 22px 30px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* smooth hover on images */
+.card .thumb {
+  transition: transform 0.4s ease;
+}
+
+.card:hover .thumb {
+  transform: scale(1.08);
+}
+
+/* --- Showcase hover animation --- */
+.showcase {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.showcase:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.showcase .image {
+  transition: transform 0.5s ease;
+}
+
+.showcase:hover .image {
+  transform: scale(1.03);
+}
+
+
+/* responsive adjustments */
+@media (max-width: 980px) {
+  .branding-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .showcase .image {
+    height: 260px;
+  }
+}
+
+@media (max-width:600px) {
+  .tit {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .caption {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .branding-grid {
+    gap: 20px;
+  }
+
+  .card {
+    min-height: 100px;
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .showcase {
+    padding: 28px;
+    border-radius: 10px;
+  }
+}
+
+
+/* SOCIAL MEDIA  */
+.social {
+  background-color: rgb(173, 173, 216);
+  padding: 60px 8%;
+  position: relative;
+}
+
+/* Heading */
+.main-title {
+  font-size: clamp(48px, 7vw, 110px);
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+.script {
+  font-family: "Dancing Script", cursive;
+  color: purple;
+  font-size: 0.6em;
+  margin-left: 8px;
+  position: relative;
+  top: -10px;
+}
+
+/* Grid */
+.poster-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 28px;
+}
+
+/* Poster Flip Container */
+.poster {
+  perspective: 1200px;
+  height: 480px;
+}
+
+/* Inner Flip Wrapper */
+.poster-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.9s ease;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+}
+
+/* Flip effect */
+.poster:hover .poster-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back Faces */
+.poster-front,
+.poster-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Front image */
+.poster-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Back side */
+.poster-back {
+  background: #ffffff;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: purple;
+}
+
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 60px;
+  }
+
+  .poster {
+    height: 360px;
+  }
+}
+
+
+/* ART PAGE */
+.art {
+  background-color: rgb(224, 220, 220);
+  padding: 60px 8%;
+  position: relative;
+}
+
+.sketch {
+  font-size: clamp(48px, 7vw, 110px);
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -2px;
+  margin-bottom: 10px;
+  color: black;
+  text-decoration: underline;
+}
+
+/* Layout */
+.art-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* Left 2×2 grid */
+.small-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.box {
+  background: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  height: 320px;
+  display: flex;
+  border: 10px solid white;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right big image */
+.big-box {
+  background: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 650px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.18);
+  display: flex;
+  border: 20px solid white;
+}
+
+.big-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media(max-width:900px) {
+  .packaging-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .big-box {
+    height: 450px;
+  }
+
+  .box {
+    height: 260px;
+  }
+}
+
+.contact {
+  background-color: #eebdbd48;
+  padding: 60px 8%;
+  position: relative;
+}
+
+.contact-section {
+  background-color: #ebd8e6;
+  color: white;
+  padding: 40px 20px;
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.contact-section h2 {
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-field {
+  width: calc(100% - 20px);
+  padding: 15px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  font-size: 1em;
+}
+
+input-field::placeholder {
+  color: #888;
+}
+
+.message-field {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.send-button {
+  background-color: #e899c8;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.send-button:hover {
+  background-color: #cb1a75;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
